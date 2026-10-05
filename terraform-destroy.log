@@ -1,5 +1,5 @@
 [0m[1mdocker_image.nginx_image: Refreshing state... [id=sha256:abe47724e466aeab9a345d8e46a221c2fa8953c7848bb4a3bd9976a7199f8cf2nginx:latest][0m
-[0m[1mdocker_container.nginx_container: Refreshing state... [id=c5b6f87b6c6a0ddeb80ae858582c56c3be4736969d96232a5761acba80a6c451][0m
+[0m[1mdocker_container.nginx_container: Refreshing state... [id=8894aa9f85931ba34276e749091375f2843d9746cf9eebbdabbe11e82a682dc7][0m
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -26,8 +26,8 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m env                                         = [] [90m-> null[0m[0m
       [31m-[0m[0m group_add                                   = [] [90m-> null[0m[0m
-      [31m-[0m[0m hostname                                    = "c5b6f87b6c6a" [90m-> null[0m[0m
-      [31m-[0m[0m id                                          = "c5b6f87b6c6a0ddeb80ae858582c56c3be4736969d96232a5761acba80a6c451" [90m-> null[0m[0m
+      [31m-[0m[0m hostname                                    = "8894aa9f8593" [90m-> null[0m[0m
+      [31m-[0m[0m id                                          = "8894aa9f85931ba34276e749091375f2843d9746cf9eebbdabbe11e82a682dc7" [90m-> null[0m[0m
       [31m-[0m[0m image                                       = "sha256:abe47724e466aeab9a345d8e46a221c2fa8953c7848bb4a3bd9976a7199f8cf2" [90m-> null[0m[0m
       [31m-[0m[0m init                                        = false [90m-> null[0m[0m
       [31m-[0m[0m ipc_mode                                    = "private" [90m-> null[0m[0m
@@ -46,7 +46,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m global_ipv6_prefix_length = 0
               [31m-[0m[0m ip_address                = "172.17.0.2"
               [31m-[0m[0m ip_prefix_length          = 16
-              [31m-[0m[0m mac_address               = "ce:64:65:c5:37:b3"
+              [31m-[0m[0m mac_address               = "fe:d2:80:20:da:33"
               [31m-[0m[0m network_name              = "bridge"
                 [90m# (2 unchanged attributes hidden)[0m[0m
             },
@@ -95,11 +95,11 @@ Terraform will perform the following actions:
 
 Changes to Outputs:
   [31m-[0m[0m application_url      = "http://localhost:8080" [90m-> null[0m[0m
-  [31m-[0m[0m nginx_container_id   = "c5b6f87b6c6a0ddeb80ae858582c56c3be4736969d96232a5761acba80a6c451" [90m-> null[0m[0m
+  [31m-[0m[0m nginx_container_id   = "8894aa9f85931ba34276e749091375f2843d9746cf9eebbdabbe11e82a682dc7" [90m-> null[0m[0m
   [31m-[0m[0m nginx_container_name = "terraform-docker-nginx" [90m-> null[0m[0m
-[0m[1mdocker_container.nginx_container: Destroying... [id=c5b6f87b6c6a0ddeb80ae858582c56c3be4736969d96232a5761acba80a6c451][0m[0m
+[0m[1mdocker_container.nginx_container: Destroying... [id=8894aa9f85931ba34276e749091375f2843d9746cf9eebbdabbe11e82a682dc7][0m[0m
 [0m[1mdocker_container.nginx_container: Destruction complete after 0s[0m
 [0m[1mdocker_image.nginx_image: Destroying... [id=sha256:abe47724e466aeab9a345d8e46a221c2fa8953c7848bb4a3bd9976a7199f8cf2nginx:latest][0m[0m
-[0m[1mdocker_image.nginx_image: Destruction complete after 1s[0m
+[0m[1mdocker_image.nginx_image: Destruction complete after 0s[0m
 [0m[1m[32m
 Destroy complete! Resources: 2 destroyed.[0m

@@ -1,60 +1,51 @@
-[0m[1mdocker_image.nginx_image: Refreshing state... [id=sha256:abe47724e466aeab9a345d8e46a221c2fa8953c7848bb4a3bd9976a7199f8cf2nginx:latest][0m
-[0m[1mdocker_container.nginx_container: Refreshing state... [id=a13e74c2d058b4c9d10ac0e38425faf45b08a99561444d91f7c7b0018dd2a77d][0m
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
-[31m-[0m/[32m+[0m destroy and then create replacement[0m
+  [32m+[0m create[0m
 
 Terraform will perform the following actions:
 
-[1m  # docker_container.nginx_container[0m is tainted, so must be [1m[31mreplaced[0m
-[0m[31m-[0m/[32m+[0m[0m resource "docker_container" "nginx_container" {
+[1m  # docker_container.nginx_container[0m will be created
+[0m  [32m+[0m[0m resource "docker_container" "nginx_container" {
+      [32m+[0m[0m attach                                      = false
       [32m+[0m[0m bridge                                      = (known after apply)
-      [33m~[0m[0m command                                     = [
-          [31m-[0m[0m "nginx",
-          [31m-[0m[0m "-g",
-          [31m-[0m[0m "daemon off;",
-        ] -> (known after apply)
+      [32m+[0m[0m command                                     = (known after apply)
       [32m+[0m[0m container_logs                              = (known after apply)
-      [31m-[0m[0m cpu_shares                                  = 0 [90m-> null[0m[0m
-      [31m-[0m[0m device_cgroup_rules                         = [] [90m-> null[0m[0m
-      [31m-[0m[0m dns                                         = [] [90m-> null[0m[0m
-      [31m-[0m[0m dns_opts                                    = [] [90m-> null[0m[0m
-      [31m-[0m[0m dns_search                                  = [] [90m-> null[0m[0m
-      [33m~[0m[0m entrypoint                                  = [
-          [31m-[0m[0m "/docker-entrypoint.sh",
-        ] -> (known after apply)
-      [33m~[0m[0m env                                         = [] -> (known after apply)
-      [33m~[0m[0m exit_code                                   = 128 -> (known after apply)
-      [31m-[0m[0m group_add                                   = [] [90m-> null[0m[0m
-      [33m~[0m[0m hostname                                    = "a13e74c2d058" -> (known after apply)
-      [33m~[0m[0m id                                          = "a13e74c2d058b4c9d10ac0e38425faf45b08a99561444d91f7c7b0018dd2a77d" -> (known after apply)
-      [33m~[0m[0m init                                        = false -> (known after apply)
-      [33m~[0m[0m ipc_mode                                    = "private" -> (known after apply)
-      [33m~[0m[0m log_driver                                  = "json-file" -> (known after apply)
-      [31m-[0m[0m log_opts                                    = {} [90m-> null[0m[0m
-      [31m-[0m[0m max_retry_count                             = 0 [90m-> null[0m[0m
-      [31m-[0m[0m memory                                      = 0 [90m-> null[0m[0m
-      [31m-[0m[0m memory_swap                                 = 0 [90m-> null[0m[0m
-      [33m~[0m[0m must_run                                    = false [33m->[0m[0m true
-        name                                        = "terraform-docker-nginx"
-      [33m~[0m[0m network_data                                = [] -> (known after apply)
-      [33m~[0m[0m platform                                    = "linux" -> (known after apply)
-      [31m-[0m[0m privileged                                  = false [90m-> null[0m[0m
-      [31m-[0m[0m publish_all_ports                           = false [90m-> null[0m[0m
-      [33m~[0m[0m runtime                                     = "runc" -> (known after apply)
-      [33m~[0m[0m security_opts                               = [] -> (known after apply)
-      [33m~[0m[0m shm_size                                    = 64 -> (known after apply)
-      [33m~[0m[0m stop_signal                                 = "SIGQUIT" -> (known after apply)
-      [33m~[0m[0m stop_timeout                                = 0 -> (known after apply)
-      [31m-[0m[0m storage_opts                                = {} [90m-> null[0m[0m
-      [31m-[0m[0m sysctls                                     = {} [90m-> null[0m[0m
-      [31m-[0m[0m tmpfs                                       = {} [90m-> null[0m[0m
-        [90m# (20 unchanged attributes hidden)[0m[0m
+      [32m+[0m[0m container_read_refresh_timeout_milliseconds = 15000
+      [32m+[0m[0m entrypoint                                  = (known after apply)
+      [32m+[0m[0m env                                         = (known after apply)
+      [32m+[0m[0m exit_code                                   = (known after apply)
+      [32m+[0m[0m hostname                                    = (known after apply)
+      [32m+[0m[0m id                                          = (known after apply)
+      [32m+[0m[0m image                                       = (known after apply)
+      [32m+[0m[0m init                                        = (known after apply)
+      [32m+[0m[0m ipc_mode                                    = (known after apply)
+      [32m+[0m[0m log_driver                                  = (known after apply)
+      [32m+[0m[0m logs                                        = false
+      [32m+[0m[0m memory_reservation                          = 0
+      [32m+[0m[0m must_run                                    = true
+      [32m+[0m[0m name                                        = "terraform-docker-nginx"
+      [32m+[0m[0m network_data                                = (known after apply)
+      [32m+[0m[0m network_mode                                = "bridge"
+      [32m+[0m[0m platform                                    = (known after apply)
+      [32m+[0m[0m read_only                                   = false
+      [32m+[0m[0m remove_volumes                              = true
+      [32m+[0m[0m restart                                     = "no"
+      [32m+[0m[0m rm                                          = false
+      [32m+[0m[0m runtime                                     = (known after apply)
+      [32m+[0m[0m security_opts                               = (known after apply)
+      [32m+[0m[0m shm_size                                    = (known after apply)
+      [32m+[0m[0m start                                       = true
+      [32m+[0m[0m stdin_open                                  = false
+      [32m+[0m[0m stop_signal                                 = (known after apply)
+      [32m+[0m[0m stop_timeout                                = (known after apply)
+      [32m+[0m[0m tty                                         = false
+      [32m+[0m[0m wait                                        = false
+      [32m+[0m[0m wait_timeout                                = 60
 
-      [33m~[0m[0m healthcheck (known after apply)
+      [32m+[0m[0m healthcheck (known after apply)
 
-      [33m~[0m[0m labels (known after apply)
+      [32m+[0m[0m labels (known after apply)
 
       [32m+[0m[0m ports {
           [32m+[0m[0m external = 8080
@@ -64,10 +55,21 @@ Terraform will perform the following actions:
         }
     }
 
-[1mPlan:[0m [0m1 to add, 0 to change, 1 to destroy.
+[1m  # docker_image.nginx_image[0m will be created
+[0m  [32m+[0m[0m resource "docker_image" "nginx_image" {
+      [32m+[0m[0m id           = (known after apply)
+      [32m+[0m[0m image_id     = (known after apply)
+      [32m+[0m[0m keep_locally = false
+      [32m+[0m[0m name         = "nginx:latest"
+      [32m+[0m[0m repo_digest  = (known after apply)
+    }
+
+[1mPlan:[0m [0m2 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
+  [32m+[0m[0m application_url      = "http://localhost:8080"
   [32m+[0m[0m nginx_container_id   = (known after apply)
+  [32m+[0m[0m nginx_container_name = "terraform-docker-nginx"
 [90m
 ─────────────────────────────────────────────────────────────────────────────[0m
 
