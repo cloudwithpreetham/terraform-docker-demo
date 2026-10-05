@@ -20,3 +20,4 @@ override.tf.json
 # Secret and variable files
 *.tfvars
 *.tfvars.json
+tfplan
