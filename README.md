@@ -217,18 +217,3 @@ Resource dependency defines the execution sequence Terraform follows when provis
 
 - **Implicit Dependency:** Formed automatically when a resource references an exported attribute of another resource (e.g., `image = docker_image.nginx_image.image_id`). Terraform automatically infers that the Docker image must be pulled before the container can be launched.
 - **Explicit Dependency:** Declared manually using the `depends_on = [resource]` meta-argument when dependencies exist outside direct attribute references.
-
-### 7. How do you handle secret variables?
-
-- **Environment Variables:** Pass sensitive inputs via environment variables prefixed with `TF_VAR_<variable_name>` at runtime.
-- **Sensitive Attribute Flag:** Mark input variables and outputs as `sensitive = true` to redact plaintext values from console outputs and CLI logs.
-- **Secrets Managers:** Dynamically retrieve credentials at runtime from dedicated vaults (such as HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault) rather than hardcoding credentials.
-- **Git Hygiene:** Add `*.tfvars`, `*.tfvars.json`, and `*.tfstate` to `.gitignore` to prevent credentials from being committed to source control.
-
-### 8. Explain the benefits of Terraform
-
-- **Multi-Cloud & Agnostic:** Provides a single, unified workflow across multiple cloud providers, on-premises systems, and SaaS platforms.
-- **Declarative Paradigm:** Focuses on _what_ the infrastructure should look like rather than writing procedural scripts on _how_ to build it.
-- **Drift Detection:** Compares real-world infrastructure against the state file to detect and rectify unauthorized manual modifications.
-- **Execution Plans:** Offers dry-run previewing (`terraform plan`) to eliminate surprises and reduce downtime before executing changes.
-- **Modularity & Reusability:** Facilitates reusable infrastructure blueprints through Terraform modules, standardizing enterprise architectural patterns.
